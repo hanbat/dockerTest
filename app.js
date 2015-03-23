@@ -6,7 +6,7 @@ app.get(['/', '/index.html'], function (req, res) {
 });
 
 app.get(['/test', '/index1.html'], function (req, res) {
-  res.send('test LOVES<3 Docker count: 6');
+  res.send('test Docker count: 8591');
 });
 
 app.listen(80);
