@@ -3,11 +3,10 @@ FROM ubuntu:14.04
 RUN apt-get update
 RUN apt-get install -y nodejs npm
 
-CMD mkdir -p /data/app/
+#ADD app.js /data/app/dockerTest
+ADD app.js /usr/local/app/
+COPY node_modules /usr/local/app/node_modules
+#COPY node_modules /data/app/dockerTest/node_modules
 
-ADD app.js /data/app/dockerTest
-ADD node_modules /data/app/dockerTest/node_modules
-
-WORKDIR /data/app/dockerTest
-
+WORKDIR /usr/local/app
 CMD nodejs app.js
