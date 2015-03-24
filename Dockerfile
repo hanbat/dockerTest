@@ -10,4 +10,4 @@ CMD ln -s /usr/bin/nodejs /usr/bin/node
 
 WORKDIR /usr/local/app
 VOLUME /data/forever/
-CMD forever -c 'node --harmony' -o /data/forever/out.log -e /data/forever/err.log app.js
+CMD forever -o /data/forever/out.log -e /data/forever/err.log app.js
